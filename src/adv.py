@@ -53,4 +53,4 @@ room['treasure'].s_to = room['narrow']
 # If the user enters "q", quit the game.
 
 def startGame():
-    player = Player()
+    player = Player("matt", room["outside"])
