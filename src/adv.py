@@ -65,14 +65,28 @@ def startGame():
 
         if(user_input in ['n', 's', 'e', 'w']):
             print(user_input)
+            attr = f"{user_input}_to"
+            getattr()
             if (user_input == 'n'):
-                player.room = player.room.n_to
+                if player.room.n_to == None:
+                    print('\nNo path over there')
+                else:
+                    player.room = player.room.n_to
             elif (user_input == 's'):
-                player.room = player.room.s_to
+                if player.room.s_to == None:
+                    print('\nNo path over there')
+                else:
+                    player.room = player.room.s_to
             elif (user_input == 'e'):
-                player.room = player.room.e_to
+                if player.room.e_to == None:
+                    print('\nNo path over there')
+                else:
+                    player.room = player.room.e_to
             elif (user_input == 'w'):
-                player.room = player.room.w_to
+                if player.room.w_to == None:
+                    print('\nNo path over there')
+                else:
+                    player.room = player.room.w_to
         elif(user_input == 'q'):
             in_session = False
         else:
