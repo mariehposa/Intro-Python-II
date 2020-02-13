@@ -58,13 +58,21 @@ def startGame():
     in_session = True
 
     while(in_session):
-        print(player.room.name)
+        print(f'The player is in {player.room.name}')
         print(player.room.description)
 
         user_input = input("Enter a cardinal direction: ")
 
         if(user_input in ['n', 's', 'e', 'w']):
             print(user_input)
+            if (user_input == 'n'):
+                player.room = player.room.n_to
+            elif (user_input == 's'):
+                player.room = player.room.s_to
+            elif (user_input == 'e'):
+                player.room = player.room.e_to
+            elif (user_input == 'w'):
+                player.room = player.room.w_to
         elif(user_input == 'q'):
             in_session = False
         else:
