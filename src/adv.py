@@ -54,3 +54,20 @@ room['treasure'].s_to = room['narrow']
 
 def startGame():
     player = Player("matt", room["outside"])
+
+    in_session = True
+
+    while(in_session):
+        print(player.room.name)
+        print(player.room.description)
+
+        user_input = input("Enter a cardinal direction: ")
+
+        if(user_input in ['n', 's', 'e', 'w']):
+            print(user_input)
+        elif(user_input == 'q'):
+            in_session = False
+        else:
+            print("movement isn't allowed.")
+
+startGame()
