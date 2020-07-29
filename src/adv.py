@@ -66,7 +66,7 @@ def startGame():
         if(user_input in ['n', 's', 'e', 'w']):
             print(user_input)
             attr = f"{user_input}_to"
-            getattr()
+            # getattr()
             if (user_input == 'n'):
                 if player.room.n_to == None:
                     print('\nNo path over there')
